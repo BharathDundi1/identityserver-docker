@@ -5,13 +5,25 @@ Dockerfile for building a docker image for IdentityServer4
 ## Build
 
 ```
-docker build -t identityserverv4 .
+docker build -t liambeeton/identityserver .
 ```
 
 ## Run
 
 ```
-docker run --rm -p 80:80 identityserverv4
+docker run -d -p 8080:80 --name identityserver liambeeton/identityserver
+```
+
+## Tag
+
+```
+docker tag liambeeton/identityserver liambeeton/identityserver:1.0
+```
+
+## Push
+
+```
+docker push liambeeton/identityserver:1.0
 ```
 
 ## URL
